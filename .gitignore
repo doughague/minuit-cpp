@@ -5,6 +5,8 @@ include/minuit-cpp/Config.hh
 doc/doxy.cfg
 doc/doxy.log
 doc/html/
+# work-in-progress
+include/minuit-cpp/math/
 src/test/
 src/tutorial/
 
