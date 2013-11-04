@@ -13,8 +13,6 @@ re-factoring does include (at least):
 * Changed naming convention for header files `#define`s
 * Removing "global" `ROOT` namespace.
 * Renaming the namespace `Minuit2` to `MinuitCpp`.
-* Moving `include/Math` to `include/minuit-cpp/math` but *not* changing the 
-  associated namespace(s) for these methods.
 
 ### Minuit2 Links
 * [Original Minuit paper](http://inspirehep.net/search?p=find+j+cphcb,10,343)
