@@ -39,13 +39,16 @@ typedef struct option GnuOpt_t;
 //! main method for minuit-cpp-config.
 void PrintUsage(ostream& os)
 {
+  os << "minuit-cpp-config: Display information about the minuit-cpp library." << endl;
+  os << "                   Note that this shows local-build information only;" << endl;
+  os << "                   use 'pkg-config minuit-cpp' for globally-installed information." << endl;
   os << "Usage: minuit-cpp-config [option]" << endl;
   os << "Options:" << endl;
   os << "  -h|--help        display this help message" << endl;
   os << "  -i|--info        library title & description" << endl;
   os << "  -c|--copyright   library lisence" << endl;
   os << "  -v|--version     library version" << endl;
-  os << "  -p|--prefix      install prefix (location)" << endl;
+  os << "  -p|--prefix      prefix (location)" << endl;
   os << "  -f|--cflags      pre-processor and compiler flags" << endl;
   os << "  -l|--libs        shared library linker flags" << endl;
   os << "  -s|--static      static library linker flags" << endl;
