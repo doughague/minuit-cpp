@@ -1,0 +1,32 @@
+// the configured options and settings for @PROJECT_NAME@
+
+// Headers / Libraries
+#define HAVE_GETOPT_H @HAVE_GETOPT_H@
+
+// Project Name
+#define MINUIT_CPP_NAME    @PROJECT_NAME@
+#define MINUIT_CPP_MONIKER "@MINUIT_CPP_MONIKER@"
+#define MINUIT_CPP_TITLE   "@MINUIT_CPP_TITLE@"
+
+// Project Version-ing
+#define MINUIT_CPP_VERSION_MAJOR @MINUIT_CPP_VERSION_MAJOR@
+#define MINUIT_CPP_VERSION_MINOR @MINUIT_CPP_VERSION_MINOR@
+#define MINUIT_CPP_VERSION_PATCH @MINUIT_CPP_VERSION_PATCH@
+#define MINUIT_CPP_VERSION "@MINUIT_CPP_VERSION@"
+
+// Configuration
+#define MINUIT_CPP_PREFIX "@CMAKE_INSTALL_PREFIX@"
+#define MINUIT_CPP_CFLAGS "-I@CMAKE_INSTALL_PREFIX@/include/@MINUIT_CPP_MONIKER@"
+#define MINUIT_CPP_LIBS   "-L@CMAKE_INSTALL_PREFIX@/lib/ -l@MINUIT_CPP_MONIKER@"
+#define MINUIT_CPP_STATIC "@CMAKE_INSTALL_PREFIX@/lib/lib@MINUIT_CPP_MONIKER@.a"
+
+// Authorship and copyright
+#define MINUIT_CPP_AUTHOR    "@MINUIT_CPP_AUTHOR@"
+#define MINUIT_CPP_YEAR      "@MINUIT_CPP_YEAR@"
+#define MINUIT_CPP_COPYRIGHT "Copyright (C) @MINUIT_CPP_YEAR@ @MINUIT_CPP_AUTHOR@\n" \
+                             "This program comes with ABSOLUTELY NO WARRANTY.\n" \
+                             "This is free software, and you are welcome to redistribute it\n" \
+                             "under the conditions of GNU General Public License, version 3.\n" \
+                             "\n" \
+                             "ROOT::Minuit2 Copyright (c) 2005 LCG ROOT Math team, CERN/PH-SFT\n" \
+                             "Authors: M. Winkler, F. James, L. Moneta, A. Zsenei"
