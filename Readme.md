@@ -69,7 +69,7 @@ make clean-doc
 ## Contribute
 Bug reports, example usages, complaints or any other information that might be 
 helpful in the development of this project should be submitted to 
-[John D. Hague](mailto:haguejd@nv.doe.gov).
+[the issue traker](https://github.com/doughague/minuit-cpp/issues).
 
 Please consider helping with this project!
 
