@@ -1,45 +1,34 @@
 # Minuit C++
-This library is a "re-factoring" of the
-[ROOT::Minuit2](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/) 
+Minimization of mathematical functions can be subtle to understand, 
+difficult to implement and numerically intensive. 
+This library is a fork and "re-factoring" of the world-renowned
+[ROOT::Minuit2 v5.28.00](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/) 
 C++ minimization package.
+The goal of this project is to enhance the availability and portability 
+of Minuit2 for use in other projects like, say, Android apps.
 
-### New Features
-Negligable amounts of the original code have been re-written but the
-re-factoring does include (at least):
+The features of this fork include:
 
+* Licensed as Free Software under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.txt).
 * Introduction of CMake build system.
-* Renaming of the package/library from `Minuit2` to `minuit-cpp`.
-* Change header file extentions from ".h" to ".hh".
-* Changed naming convention for header files `#define`s
-* Removing "global" `ROOT` namespace.
-* Renaming the namespace `Minuit2` to `MinuitCpp`.
-
-### Minuit2 Links
-* [Original Minuit paper](http://inspirehep.net/search?p=find+j+cphcb,10,343)
-* [Minuit](http://seal.web.cern.ch/seal/snapshot/work-packages/mathlibs/minuit/)
-* [Minuit2 documentation](http://seal.web.cern.ch/seal/MathLibs/Minuit2/html/)
-* [search: Minuit2](https://duckduckgo.com/?q=Minuit2)
-* [wiki: MINUIT](https://en.wikipedia.org/wiki/MINUIT)
+* Depends only on [the C/C++ standard libraries](www.cplusplus.com/reference/).
+* Tutorials and examples (still in progress).
+* Unit and sanity tests (still in progress).
 
 ## Installation
 
-### Dependencies
-* [C/C++ standard libraries](www.cplusplus.com/reference/).
-* [C++ compiler](llvm.org/releases/download.html).
-* [CMake](http://www.cmake.org/) for creating build instructions.
-* [(GNU) make](https://www.gnu.org/software/make/) for compiling/building.
-* [doxygen](www.stack.nl/~dimitri/doxygen/) for making API documentation (optional).
-
 ### Build
-From the top level minuit-cpp source directory one can follow a standard CMake 
+From the top level minuit-cpp source directory one can follow a standard [CMake](http://www.cmake.org/) 
 procedure to compile this library:
 ```
 mkdir build && cd build
 cmake ..
 make
 ```
-Both a static archive and a shared object library are created in the lib/
-sub-directory of the build directory.
+Both a static archive (libminuit-cpp.a) and a shared object library (libminuit-cpp.so) 
+are created in build/lib.
+Information about the (local) built objects can be accessed by running 
+`build/bin/minuit-cpp-config --help`.
 
 ### Install
 From the build directory use:
@@ -47,44 +36,17 @@ From the build directory use:
 sudo make install
 ```
 to install (the libraries and headers) to /usr/local.
-This will also allow minuit-cpp to be used with the pkg-config software, 
-i.e. `pkg-config minuit-cpp --version`.
-
-### Documentation
-If you have [doxygen](www.stack.nl/~dimitri/doxygen/) you can build html 
-source code documentation by typing:
-```
-make doc
-```
-from the build directory.
-
-The documentation can be accessed by opening 
-[doc/html/index.html](doc/html/index.html) in your web browser.
-
-The documentation can be cleaned (deleted) by typing:
-```
-make clean-doc
-```
+Information about the installed objects can be accessed by running 
+`pkg-config minuit-cpp --help`.
 
 ## Contribute
 Bug reports, example usages, complaints or any other information that might be 
 helpful in the development of this project should be submitted to 
 [the issue traker](https://github.com/doughague/minuit-cpp/issues).
 
-Please consider helping with this project!
-
-**To-Do's**:
-* Add `math` headers
-* Add tests
-* Add tutorials
-
-**Wish List**:
-
-* Update CMakeLists.txt to support:
-  * Windows (+ Cygwin?) compilation!
-  * Visual-Studio project 
-  * XCode project
-  * Eclipse project
+**Consider helping with this project.**
+In particular, if you build this library on a non MacOSX or Debian-style 
+system, please let me know.
 
 ## License
 
@@ -94,7 +56,6 @@ contains the following copyright:
 
 > Copyright (c) 2005 LCG ROOT Math team,  CERN/PH-SFT  
 > Authors: M. Winkler, F. James, L. Moneta, A. Zsenei 2003-2005
-
 
 ### This Version
 minuit-cpp - C++ Minimization Package
